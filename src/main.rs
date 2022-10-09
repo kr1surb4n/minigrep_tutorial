@@ -70,7 +70,7 @@ fn build_this() {
         println!("Problem parsing arguments: {err}");
         process::exit(1);
     });
-    
+
     assert_eq!(config.query, "a");
     assert_eq!(config.file_path, "b");
 }
