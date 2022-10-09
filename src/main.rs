@@ -13,12 +13,8 @@ fn main() {
     // "searchstring",
     // "example-filename.txt",
     // ]
-
-    if args.len() < 3 {
-        panic!("not enough arguments");
-    }
-
-    let config = Config::new(&args);
+    
+    let config = Config::build(&args);
 
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
