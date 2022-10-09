@@ -30,18 +30,20 @@ struct Config {
     file_path: String,
 }
 
-fn parse_config(args: &[String]) -> Config {
-    let query = args[1].clone();
-    let file_path = args[2].clone();
+impl Config {
+    fn new(args: &[String]) -> Config {
+        let query = args[1].clone();
+        let file_path = args[2].clone();
 
-    Config { query, file_path }
+        Config { query, file_path }
+    }
 }
 
 #[test]
 fn parse_this() {
     let args: Vec<String> = vec![String::from("0"), String::from("a"), String::from("b")];
 
-    let config = parse_config(&args);
+    let config = Config::new(&args);
     assert_eq!(config.query, "a");
     assert_eq!(config.file_path, "b");
 }
