@@ -31,3 +31,9 @@ fn parse_config(args: &[String]) -> (&str, &str) {
 
     (query, file_path)
 }
+
+
+#[test]
+fn parse_this() {
+    let args: Vec<String> = [String::from_str("a"), ]
+}
