@@ -36,7 +36,7 @@ fn parse_config(args: &[String]) -> (&str, &str) {
 fn parse_this() {
     use std::str::FromStr;
 
-    let args: Vec<String> = [String::from_str("a"), String::from_str("b")];
+    let args: Vec<String> = vec![String::from_str("a"), String::from_str("b")];
 
     let (query, file_path) = parse_config(&args);
     assert_eq!(query, "a");
