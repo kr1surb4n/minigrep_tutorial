@@ -14,6 +14,10 @@ fn main() {
     // "example-filename.txt",
     // ]
 
+    if args.len() < 3 {
+        panic!("not enough arguments");
+    }
+
     let config = Config::new(&args);
 
     println!("Searching for {}", config.query);
