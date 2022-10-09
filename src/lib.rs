@@ -1,11 +1,15 @@
 use std::process;
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let mut results = Vec::new();
+
     for line in contents.lines() {
         if line.contains(query) {
-            vec![]
+            results.push(line);
         }
     }
+
+    results
 }
 
 #[cfg(test)]
