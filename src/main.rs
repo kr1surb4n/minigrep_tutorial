@@ -40,5 +40,5 @@ fn parse_this() {
 
     let (query, file_path) = parse_config(&args);
     assert_eq!(query, "a");
-    assert_eq!(file_path,"b");
+    assert_eq!(file_path, "b");
 }
