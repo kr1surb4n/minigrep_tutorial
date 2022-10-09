@@ -14,7 +14,10 @@ fn main() {
     // "example-filename.txt",
     // ]
 
-    let config = Config::build(&args);
+    let config = match Config::build(&args) {   // we can match Result of parse()
+        Ok(config) => config,							    // crashing with expect change with match
+        Err(_)  => Err(_),
+    };
 
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
