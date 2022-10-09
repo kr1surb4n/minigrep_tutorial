@@ -64,7 +64,7 @@ Pick three.";
     fn parse_this() {
         let args: Vec<String> = vec![String::from("0"), String::from("a"), String::from("b")];
 
-        let config = Config::build(&args).unwind();
+        let config = Config::build(&args).unwrap();
         assert_eq!(config.query, "a");
         assert_eq!(config.file_path, "b");
     }
