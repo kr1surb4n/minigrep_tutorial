@@ -13,7 +13,7 @@ fn main() {
     // "searchstring",
     // "example-filename.txt",
     // ]
-    
+
     let config = Config::build(&args);
 
     println!("Searching for {}", config.query);
