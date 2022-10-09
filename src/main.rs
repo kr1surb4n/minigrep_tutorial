@@ -1,6 +1,6 @@
+use minigrep::Config;
 use std::env;
 use std::process;
-use minigrep::Config;
 
 fn main() {
     // get all command line args and load them into structure
