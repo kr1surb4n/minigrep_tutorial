@@ -1,7 +1,5 @@
 use std::env;
 
-use std::process;
-
 fn main() {
     // get all command line args and load them into structure
     let args: Vec<String> = env::args().collect();
