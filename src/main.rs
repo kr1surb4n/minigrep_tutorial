@@ -26,8 +26,3 @@ fn main() {
 
     minigrep::run(config);
 }
-
-struct Config {
-    query: String,
-    file_path: String,
-}
