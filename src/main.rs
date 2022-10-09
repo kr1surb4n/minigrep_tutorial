@@ -24,7 +24,7 @@ fn main() {
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
 
-    run(config);
+    minigrep::run(config);
 }
 
 struct Config {
