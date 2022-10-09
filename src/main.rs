@@ -14,11 +14,10 @@ fn main() {
     // "example-filename.txt",
     // ]
 
-    let query = &args[1];
-    let file_path = &args[2];
+    let config = parse_config(&args);
 
-    println!("Searching for {}", query);
-    println!("In file {}", file_path);
+    println!("Searching for {}", config.query);
+    println!("In file {}", config.file_path);
 
     let contents = fs::read_to_string(file_path).expect("Should have been able to read the file");
 
