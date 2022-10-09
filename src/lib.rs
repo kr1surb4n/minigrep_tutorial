@@ -48,7 +48,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 mod tests {
     use super::*;
     use std::process;
-    
+
     #[test]
     fn one_result() {
         let query = "duct";
