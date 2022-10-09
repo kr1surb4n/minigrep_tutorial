@@ -6,7 +6,7 @@ fn main() {
     // will panic on non-unicode sign
     // std::env::args_os -> unicode safe
 
-    dbg!(args);
+    dbg!(&args);
     // args = [
     // "target/debug/minigrep",
     // "searchstring",
