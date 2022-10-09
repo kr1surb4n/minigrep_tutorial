@@ -55,8 +55,6 @@ pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a st
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path);
 
-    println!("With text:\n{contents}");
-
     let results = if config.ignore_case {
         search_case_insensitive(&config.query, &contents)
     } else {
