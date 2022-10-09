@@ -57,6 +57,8 @@ fn run(config: Config) -> Result<(), Box<dyn Error>> {
         fs::read_to_string(config.file_path).expect("Should have been able to read the file");
 
     println!("With text:\n{contents}");
+
+    Ok(())
 }
 
 #[test]
