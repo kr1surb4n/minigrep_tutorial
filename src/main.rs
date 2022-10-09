@@ -14,11 +14,10 @@ fn main() {
     // "example-filename.txt",
     // ]
 
-    let config = match Config::build(&args) {
-        // we can match Result of parse()
-        Ok(config) => config, // crashing with expect change with match
-        stra => Err(stra),
-    };
+    let config = match Config::build(&args).unwrap_or_else(|err| {
+        println!("Problem parsing arguments: {err}");
+        process::exit(1);
+    });
 
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
