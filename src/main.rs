@@ -62,3 +62,11 @@ fn parse_this() {
     assert_eq!(config.query, "a");
     assert_eq!(config.file_path, "b");
 }
+
+fn build_this() {
+    let args: Vec<String> = vec![String::from("0"), String::from("a"), String::from("b")];
+
+    let config = Config::build(&args);
+    assert_eq!(config.query, "a");
+    assert_eq!(config.file_path, "b");
+}
