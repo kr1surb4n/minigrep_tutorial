@@ -1,6 +1,5 @@
 use std::process;
 
-
 struct Config {
     query: String,
     file_path: String,
@@ -18,7 +17,6 @@ impl Config {
         Ok(Config { query, file_path })
     }
 }
-
 
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let mut results = Vec::new();
