@@ -63,6 +63,8 @@ fn parse_this() {
     assert_eq!(config.file_path, "b");
 }
 
+
+#[test]
 fn build_this() {
     let args: Vec<String> = vec![String::from("0"), String::from("a"), String::from("b")];
 
