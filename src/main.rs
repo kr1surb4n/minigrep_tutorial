@@ -1,5 +1,6 @@
 use std::env;
 use std::fs;
+use std::error::Error;
 use std::process;
 
 fn main() {
@@ -51,7 +52,7 @@ impl Config {
     }
 }
 
-fn run(config: Config) {
+fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents =
         fs::read_to_string(config.file_path).expect("Should have been able to read the file");
 
