@@ -14,7 +14,7 @@ fn main() {
     // "example-filename.txt",
     // ]
 
-    let config = parse_config(&args);
+    let config = Config::new(&args);
 
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
