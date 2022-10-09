@@ -34,7 +34,6 @@ fn parse_config(args: &[String]) -> (&str, &str) {
 
 #[test]
 fn parse_this() {
-    use std::str::FromStr;
 
     let args: Vec<String> = vec![String::from("a"), String::from("b")];
 
