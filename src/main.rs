@@ -55,6 +55,8 @@ impl Config {
 }
 
 fn run(config: &Config) {}
+
+
 #[test]
 fn parse_this() {
     let args: Vec<String> = vec![String::from("0"), String::from("a"), String::from("b")];
